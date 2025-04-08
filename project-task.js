@@ -31,7 +31,7 @@ This activity reinforces:
 // ============================================
 // ❌ Original Code (Before Refactoring)
 // ============================================
-
+/*
 // Script 1 - Greeting multiple users
 console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
@@ -77,26 +77,40 @@ function greetName(name){
 }
 
 // Function 2 - Sum calculation
-function calculation(num1, num2){
-   let sum = num1 + num2;
-   let product = num1 * num2;
-   console.log(`The sum of ${num1} and ${num2} is ${sum}`);
-   console.log(`The product of ${num1} and ${num2} is ${product}`);
-
+function add(num1, num2){
+   return num1 + num2; 
 }
 
-// Function 3 - Print names from a list
+//Function 3 - Print sum
+function printSum(num1, num2){
+   console.log(`The sum of ${num1} and ${num2} is ${add(num1, num2)}`);
+}
+
+// Function 4 - Product calculation
+function product(num1, num2){
+   return num1 * num2; 
+}
+
+//Function 5 - Print product
+function prinProduct(num1, num2){
+   console.log(`The product of ${num1} and ${num2} is ${product(num1, num2)}`);
+}
+
+// Function 6 - Print names from a list
 function printNames(nameList) {
    console.log("Names in the list:");
 for (let i = 0; i < nameList.length; i++) {
     console.log(nameList[i]);
 }
 }
+let names = ["Alice", "Bob", "Charlie"];
+let no1 = 5, no2 = 10;
 
 greetName("Alice");
 greetName("Bob");
 greetName("Charlie");
 
-calculation(5,10);
+printSum(no1, no2);
+prinProduct(no1, no2);
 
-printNames(["Alice", "Bob", "Charlie"]);
+printNames(names);
