@@ -52,7 +52,6 @@ console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
-
 /*
 ===========================================
 🛠️ Steps for Refactoring
@@ -72,3 +71,32 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+// Function 1 - Greeting multiple users
+function greetName(name){
+   console.log(`Welcome, ${name}!`);
+}
+
+// Function 2 - Sum calculation
+function calculation(num1, num2){
+   let sum = num1 + num2;
+   let product = num1 * num2;
+   console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+   console.log(`The product of ${num1} and ${num2} is ${product}`);
+
+}
+
+// Function 3 - Print names from a list
+function printNames(nameList) {
+   console.log("Names in the list:");
+for (let i = 0; i < nameList.length; i++) {
+    console.log(nameList[i]);
+}
+}
+
+greetName("Alice");
+greetName("Bob");
+greetName("Charlie");
+
+calculation(5,10);
+
+printNames(["Alice", "Bob", "Charlie"]);
