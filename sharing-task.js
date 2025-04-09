@@ -36,6 +36,17 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. Capitalize the role if needed.
 // 4. Return the result.
 
+function generateBadge(name, role){
+   return `Name: ${name}, Role: ${roleUppercase(role)}`;
+}
+function roleUppercase(role){
+    return role.charAt(0).toUpperCase() + role.slice(1);
+}
+
+let personName = "Alice";
+let roleName = "speaker";
+
+console.log(generateBadge(personName, roleName));
 
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
@@ -51,6 +62,18 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
 
+function eventCost(num, cost){
+    let totalCost = cost * num; 
+    if (num > 100){
+        return `Total cost after 10% discount is ${totalCost - (totalCost * (10/100))}`;
+    }
+    else {
+        return `Total cost is ${totalCost}`;
+    }
+}
+
+console.log(eventCost(105,20));
+console.log(eventCost(50,20));
 
 // ============================================
 // 🧩 Task 3: Validate Email
@@ -63,6 +86,20 @@ reusable functions that solve specific tasks. This activity encourages:
 // Steps:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
+
+function emailValidate(email){
+    if (email.includes("@") && email.includes(".")) {
+        console.log(`${email} is valid email`);
+        return true;
+    }
+    else {
+        console.log(`${email} is invalid email`);
+        return false;
+    }
+}
+
+emailValidate("john@gmail.com");
+emailValidate("johngmail.com");
 
 
 // ============================================
